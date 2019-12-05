@@ -87,12 +87,56 @@ namespace NeuralNetwork
 
             //We'll say this is {{ x1->l1, x1->l2 }, {x2->l1, x2->l2}}
             double[,] weights = new double[,] { { 0.1, 0.2 }, { 0.3, 0.4 } };
-            Console.WriteLine(weights[0,1]);
+            //Console.WriteLine(weights[0,1]);
 
             //This is { l1->y, l2->y }
             double[] final_weights = new double[] { 0.5, 0.6 };
 
+            //Input nodes
+            double x1 = 1;
+            double x2 = 0;
 
+            //Output nodes
+            //In this case I'd like y = 1
+            double y;
+
+            //Training data
+            double expected_y = 1;
+
+            //Using these parameters, adjust the weights via back propogation.
+            //Need derivative function
+
+            //This is Object code
+            Node node1 = new Node("L1", 1 );
+            System.Console.WriteLine(node1.Name);
+        }
+
+        /* PYTHON CODE FOR DERIVATIVE FUNCTION
+        def nonlin(x, deriv= False):
+            if (deriv == True):
+                return x * (1 - x)
+
+            return 1 / (1 + np, exp(-x))
+        */
+
+
+        //   df(x)/dx = lim h->0 (f(x+h) - f(x))/h
+
+        
+        //This is for the Dervice function, need to learn C# objects first
+        public static void Derive(string filename){
+
+        }
+
+        public class Node
+        {
+            public string Name { get; set; }
+            public int Value { get; set; }
+            public Node(string name, int value)
+            {
+                Name = name;
+                Value = value;
+            }
         }
     }
 }
