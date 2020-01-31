@@ -1,5 +1,6 @@
-﻿//Neural Network
-//Author: Debrah Wyatt
+﻿//Neural Network 
+// Program.cs
+//Created by the UVic AI Club
 //Created on Dec 4th 2019
 
 /*
